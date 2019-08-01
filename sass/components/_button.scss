@@ -1,18 +1,24 @@
 .btn {
     display: block;
     text-transform: uppercase;
+    min-width: 18rem;
     padding: 1.3rem 2.5rem;
     color: var(--color-primary-light-2);
     background-color: var(--color-secondary);
     border: 1px solid transparent;
-    border-radius: 1.2rem;
+    border-radius: 1rem;
     transition: all .2s;
     letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color var(--trs-main-time);
 
     &:hover {
         background-color: transparent;
         border: 1px solid currentColor;
     }
 
-    &--greyed {}
+    &:focus {
+        outline: none;
+        background-color: var(--color-secondary-light);
+    }
 }

@@ -11,11 +11,13 @@
     --color-secondary-dark: hsl(196, 95%, 32%);
 
     --overlay-dark: linear-gradient(rgba(30, 39, 46, 0.642), rgba(30, 39, 46, 0.642));
+
+    --trs-main-time: .2s;
+
+    --box-shadow-1: 0 0 .4rem .1rem rgba(0, 0, 0, .15);
 }
 
 // BREAKPOINTS
-
-
 $bp-large: 87.5em;
 $bp-medium: 50em;
 $bp-small: 37.5em;
