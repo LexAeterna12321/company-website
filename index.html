@@ -8,19 +8,25 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="container">
-    <nav class="nav">
-      <p class="nav__phone">+00 (123) 456 7890</p>
-      <button class="nav__btn btn">get a qoute</button>
-      <h2 class="nav__logo">YAMMOE</h2>
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#!" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="#!" class="nav__link">Pages</a></li>
-        <li class="nav__item"><a href="#!" class="nav__link">About us</a></li>
-        <li class="nav__item"><a href="#!" class="nav__link">Carrer</a></li>
-        <li class="nav__item"><a href="#!" class="nav__link">Contact</a></li>
-      </ul>
-    </nav>
     <header class="header">
+      <nav class="nav">
+        <p class="nav__phone">
+          <svg class="nav__phone-icon">
+            <use xlink:href="img/sprite.svg#icon-phone"></use>
+          </svg>
+          +00 (123) 456 7890
+        </p>
+        <button class="nav__btn btn">Search Facility</button>
+        <h2 class="nav__logo">YAMMOE</h2>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#!" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#!" class="nav__link">Pages</a></li>
+          <li class="nav__item"><a href="#!" class="nav__link">About us</a></li>
+          <li class="nav__item"><a href="#!" class="nav__link">Carrer</a></li>
+          <li class="nav__item"><a href="#!" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
       <h2 class="h2 header__h2">Habitant Morbi Tristique</h2>
       <h1 class="h1 header__h1">Senectus Et Netus</h1>
       <h3 class="h3 header__h3">
@@ -28,14 +34,22 @@
         Habitasse Platea Dictumst Aliquam Venenatis Leo Et Orci Ut Pretium Odio
         Eu Nisi Nulla At.
       </h3>
-      <button class="nav__btn btn">Get to know us</button>
-      <button class="nav__btn btn">Our work</button>
+      <div class="header__btns">
+        <button class="header__btn btn">Get to know us</button>
+        <button class="header__btn btn">Our work</button>
+      </div>
     </header>
+
     <section class="offer">Offer</section>
+
     <section class="product">Product</section>
+
     <section class="employees">employees</section>
+
     <section class="reviews">reviews</section>
+
     <section class="cards">cards</section>
+
     <footer class="footer">footer</footer>
   </body>
 </html>

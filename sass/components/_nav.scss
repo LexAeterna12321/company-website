@@ -1,0 +1,68 @@
+.nav {
+    justify-self: stretch;
+    grid-column: 1 /-1;
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 18rem;
+    grid-template-areas:
+        ". phone . . btn      ."
+        ". logo  . . nav-list .";
+
+    @media only screen and (max-width:$bp-medium) {
+        grid-template-areas:
+            "phone  phone     logo      logo      btn       btn"
+            ".      nav-list  nav-list  nav-list  nav-list  .";
+        justify-content: center;
+    }
+
+    &__phone {
+        grid-area: phone;
+        display: flex;
+        align-items: center;
+    }
+
+    &__phone-icon {
+        width: 2rem;
+        height: 2rem;
+        fill: currentColor;
+        margin-right: .9rem;
+    }
+
+    &__btn {
+        grid-area: btn;
+        justify-self: end;
+    }
+
+    &__logo {
+        grid-area: logo;
+        font-size: 4rem;
+    }
+
+    &__list {
+        grid-area: nav-list;
+        list-style: none;
+        display: flex;
+    }
+
+    &__item {
+        font-size: 1.4rem;
+
+    }
+
+    &__link {
+        padding: 1.8rem;
+        margin: 0 .5rem;
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+        display: block;
+        line-height: 1;
+        transition: color .1s;
+        border: 1px solid currentColor;
+
+        &:hover {
+            color: var(--color-secondary)
+        }
+    }
+}

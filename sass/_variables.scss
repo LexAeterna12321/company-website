@@ -1,0 +1,21 @@
+// https://flatuicolors.com/palette/se
+
+:root {
+    --color-primary: #485460;
+    --color-primary-light-1: #808e9b;
+    --color-primary-light-2: #dde5ed;
+    --color-primary-dark: #1e272e;
+
+    --color-secondary: hsl(196, 95%, 52%);
+    --color-secondary-light: hsl(196, 95%, 72%);
+    --color-secondary-dark: hsl(196, 95%, 32%);
+
+    --overlay-dark: linear-gradient(rgba(30, 39, 46, 0.642), rgba(30, 39, 46, 0.642));
+}
+
+// BREAKPOINTS
+
+
+$bp-large: 87.5em;
+$bp-medium: 50em;
+$bp-small: 37.5em;
