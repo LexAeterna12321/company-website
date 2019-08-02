@@ -24,7 +24,7 @@
 }
 
 .review {
-    margin: 5rem 3rem;
+    margin: 0 3rem 5rem 3rem;
 
     &__text {
         font-style: italic;
@@ -65,12 +65,9 @@
         margin-bottom: .4rem;
         font-size: 1.3rem;
     }
-
-
 }
 
 .review-person-img-box {
-
     width: 8rem;
     height: 8rem;
 }

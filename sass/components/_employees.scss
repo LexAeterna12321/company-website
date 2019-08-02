@@ -5,7 +5,7 @@
 
 .employee-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
     grid-auto-rows: 40rem;
     justify-items: center;
     grid-gap: var(--grid-gap-medium);
