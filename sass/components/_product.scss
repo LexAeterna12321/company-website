@@ -1,10 +1,8 @@
 .product {
     grid-column: full-start / full-end;
     background-image: var(--overlay-dark), url("../img/product-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--color-primary-dark);
+    @include bgimage-center;
+
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 
@@ -12,13 +10,21 @@
         margin: 5rem 0;
         padding: 5rem;
         background-color: #fff;
-        border-top-left-radius: 4rem;
-        border-bottom-right-radius: 4rem;
         grid-column: 3 / span 6;
         display: flex;
         flex-direction: column;
         align-items: center;
         overflow: hidden;
+
+
+        @media only screen and (min-width:$bp-medium) {
+            @include shape;
+        }
+
+        @media only screen and (max-width:$bp-medium) {
+            grid-column: 1 / -1;
+            margin: 0;
+        }
     }
 
     &__content {
@@ -70,7 +76,15 @@
         height: 3rem;
         border-radius: 50%;
         padding: 1rem;
-        background-color: var(--color-primary-light-1);
+        background-color: var(--color-primary-light-2);
+        fill: var(--color-secondary);
+        transition: all var(--trs-main-time);
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-secondary);
+            fill: var(--color-primary-light-2);
+        }
     }
 
     &__text {

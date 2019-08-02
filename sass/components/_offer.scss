@@ -1,7 +1,6 @@
 .offer {
     grid-column: full-start / full-end;
     text-align: center;
-    color: var(--color-primary-dark);
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 
@@ -17,7 +16,7 @@
         grid-column: 2 / 10;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        grid-gap: 2rem;
+        grid-gap: var(--grid-gap-medium);
     }
 }
 
@@ -40,5 +39,11 @@
         font-size: 1.3rem;
         line-height: 1.8;
         padding: 1.5rem;
+    }
+
+    &__btn {
+        &:hover {
+            color: var(--color-secondary);
+        }
     }
 }
