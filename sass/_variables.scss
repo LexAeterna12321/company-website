@@ -4,13 +4,15 @@
     --color-primary: #485460;
     --color-primary-light-1: #808e9b;
     --color-primary-light-2: #dde5ed;
+    --color-primary-light-3: #f4f9ff;
     --color-primary-dark: #1e272e;
 
     --color-secondary: hsl(196, 95%, 52%);
     --color-secondary-light: hsl(196, 95%, 72%);
-    --color-secondary-dark: hsl(196, 95%, 32%);
+    --color-secondary-dark: rgb(4, 117, 159);
 
     --overlay-dark: linear-gradient(rgba(30, 39, 46, 0.642), rgba(30, 39, 46, 0.642));
+    --overlay-light: linear-gradient(rgba(4, 117, 159, 0.642), rgba(4, 117, 159, 0.642));
 
     --trs-main-time: .2s;
 
@@ -18,6 +20,8 @@
 }
 
 // BREAKPOINTS
-$bp-large: 87.5em;
-$bp-medium: 50em;
-$bp-small: 37.5em;
+$bp-largest: 87.5em;
+$bp-large: 75em;
+$bp-medium: 56.25em;
+$bp-small: 46.87em;
+$bp-smallest: 37.5em;

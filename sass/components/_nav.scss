@@ -1,33 +1,28 @@
 .nav {
-    align-self: start;
-    justify-self: stretch;
-    grid-column: 1 /-1;
+    grid-column: 2 / span 3;
     display: grid;
-    justify-content: space-evenly;
     align-items: center;
     min-height: 18rem;
+    justify-self: stretch;
+    border-bottom: 1px solid var(--color-primary-light-1);
+    justify-content: center;
+    grid-gap: 2rem;
     grid-template-areas:
-        ". phone . . btn      ."
-        ". logo  . . nav-list .";
-
-    @media only screen and (max-width:$bp-medium) {
-        grid-template-areas:
-            "phone  phone     logo      logo      btn       btn"
-            ".      nav-list  nav-list  nav-list  nav-list  .";
-        justify-content: center;
-    }
+        " phone  logo  btn "
+        "nav-list  nav-list nav-list";
 
     @media only screen and (max-width:$bp-small) {
+        grid-column: 1 / -1;
         grid-template-areas:
             "logo logo logo "
-            "phone phone btn "
+            "phone . btn "
             " nav-list nav-list nav-list ";
-        justify-content: center;
-        grid-row-gap: 3.5rem;
+
+        grid-gap: 1rem;
+        padding-bottom: 1rem;
     }
 
     &__phone {
-
         grid-area: phone;
         display: flex;
         align-items: center;
@@ -60,6 +55,13 @@
     &__item {
         font-size: 1.4rem;
 
+        @media only screen and (max-width:$bp-medium) {
+            margin: .3rem;
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            margin: .1rem;
+        }
     }
 
     &__link {
@@ -73,6 +75,11 @@
         transition: color .1s;
         border: 1px solid currentColor;
         transition: color var(--trs-main-time);
+
+
+        @media only screen and (max-width:$bp-small) {
+            padding: 1.2rem;
+        }
 
         &:hover {
             color: var(--color-secondary)

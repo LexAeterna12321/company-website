@@ -1,8 +1,44 @@
 .employees {
     grid-column: center-start / center-end;
-    background-color: darkorchid;
+    color: var(--color-primary-dark);
+    text-align: center;
+
+    &__h4 {}
+
+    &__h3 {}
+}
+
+.employee-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: repeat(2, minmax(40rem, 1fr));
+    justify-items: center;
+    grid-gap: 2rem;
+}
+
+
+.employee-card {
+    @include overlay;
+    border: 1px solid red;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25rem;
+    flex-direction: column;
+
+
+    &__name {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+
+    &__text {
+        margin-bottom: .4rem;
+        font-size: 1.3rem;
+    }
+}
+
+.employee-card-photo-box {
+    flex-basis: 80%;
+
+    &__photo {
+        @include object-fit-img;
+    }
 }
