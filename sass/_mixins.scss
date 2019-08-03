@@ -1,6 +1,7 @@
 @mixin overlay {
     & {
         position: relative;
+        cursor: pointer;
     }
 
     &__overlay {

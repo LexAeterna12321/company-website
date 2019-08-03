@@ -1,8 +1,194 @@
 .footer {
-    grid-column: center-start / center-end;
-    background-color: darkslategrey;
+    @include bgimage-center;
+    grid-column: full-start / full-end;
+    background-image: var(--overlay-dark-2), url("../img/footer-bg.jpg");
+    min-height: 35vh;
+    color: var(--color-primary-light-2);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    &__columns {
+        grid-column: 2 / span 4;
+        display: grid;
+        grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+        grid-column-gap: 6rem;
+
+        @media only screen and (max-width:$bp-medium) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.footer-column {
+    &__header {
+        align-self: flex-start;
+        margin: 6rem 0;
+        max-height: 2rem;
+
+        @media only screen and (max-width:$bp-medium) {
+            margin: 3rem 0;
+        }
+    }
+
+    &__text {
+        font-size: 1.4rem;
+    }
+
+    &__link {
+        position: relative;
+        width: max-content;
+        display: block;
+        text-decoration: none;
+        color: var(--color-secondary-dark);
+        font-size: 1.4rem;
+        margin: 4rem 0;
+        transition: all var(--trs-main-time);
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        &:not(:last-child) {
+            &::after {
+                width: 20rem;
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -2rem;
+                left: 0;
+                height: 1px;
+                background-color: var(--color-primary-light-1);
+            }
+        }
+
+        &--inline {
+            margin: auto;
+            display: inline-block;
+            padding: 0 0.4rem;
+        }
+
+        &:hover {
+            color: var(--color-secondary-light);
+        }
+
+        @media only screen and (max-width:$bp-medium) {
+            margin: 4rem auto;
+
+            &:not(:last-child) {
+                &::after {
+                    width: 100%;
+
+                }
+            }
+        }
+    }
+
+    &__input {
+        width: 100%;
+        font-family: inherit;
+        color: inherit;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: none;
+        border-radius: 1rem;
+        padding: 1.4rem 0 1.4rem 1.4rem;
+        margin: 1.3rem 0;
+        transition: all var(--trs-main-time);
+
+        &::placeholder {}
+
+        &:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.4);
+
+            &::placeholder {
+                color: var(--color-secondary);
+            }
+        }
+    }
+
+    &__btn {
+        margin: 1.3rem 0;
+    }
+
+    &__icons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: var(--grid-gap-small);
+        justify-items: center;
+
+        @media only screen and (max-width:$bp-medium) {
+            margin: 2rem 0;
+        }
+    }
+
+    &__icon {
+        fill: var(--color-secondary);
+    }
+
+    &__social-icons {
+        display: flex;
+    }
+
+    &__social-icon {
+        margin: 2rem;
+        width: 100%;
+        fill: var(--color-secondary);
+        cursor: pointer;
+
+        svg {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        &:hover {
+            fill: var(--color-secondary-light);
+        }
+    }
+}
+
+.footer-nav {
+    grid-column: 2 / span 4;
+    align-self: center;
+    border-top: 1px solid var(--color-primary-light-1);
+    border-bottom: 1px solid var(--color-primary-light-1);
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width:$bp-medium) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: var(--color-secondary);
+        transition: color var(--trs-main-time);
+        margin: 4rem;
+        font-size: 1.4rem;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--color-secondary-light);
+        }
+
+        @media only screen and (max-width:$bp-medium) {
+            margin: 1.5rem 0;
+        }
+    }
+}
+
+.copyrights {
+    margin: 4rem 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25rem;
+    justify-content: space-between;
+    grid-column: 2 / span 4;
+    text-align: center;
+    font-size: 1.4rem;
 }

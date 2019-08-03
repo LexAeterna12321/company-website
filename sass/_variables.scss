@@ -12,12 +12,14 @@
     --color-secondary-dark: rgb(4, 117, 159);
 
     --overlay-dark: linear-gradient(rgba(30, 39, 46, 0.642), rgba(30, 39, 46, 0.642));
+    --overlay-dark-2: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9));
     --overlay-light: linear-gradient(rgba(4, 117, 159, 0.642), rgba(4, 117, 159, 0.642));
 
     --trs-main-time: .2s;
 
     --box-shadow-1: 0 0 .4rem .1rem rgba(0, 0, 0, .15);
 
+    --grid-gap-small: 1rem;
     --grid-gap-medium: 2rem;
 }
 
